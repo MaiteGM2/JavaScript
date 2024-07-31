@@ -1,15 +1,15 @@
-function gestionarPedido(){
-    saludo(`Pedro`);
-    mayorDeEdad(17);
+function gestionarPedido(userName, age, paymentMethod){
+    saludo(userName);
+    mayorDeEdad(age);
     let firstValue = costoTotal(25, 1000);
-    let firstDiscount = aplicarDescuento(firstValue);
-    let secondDiscount = metodoDePago("efectivo");
+    let firstDiscount = aplicarDescuento(firstValue, age);
+    let secondDiscount = metodoDePago(paymentMethod, firstDiscount);
     horaDelPedido();
-    let totalValue = valorDelCubierto();
-    resumenDelPedido();
+    let totalValue = valorDelCubierto(secondDiscount);
+    resumenDelPedido(firstValue, firstDiscount, secondDiscount, totalValue, age, paymentMethod);
 }
 
-gestionarPedido();
+gestionarPedido(Pedro, 17, "efectivo");
 
 function saludo(userName){
     console.log(`Hola ${userName}! Me alegra que nos hayas elegido :)`);
@@ -25,7 +25,7 @@ function costoTotal(amount, unitValue){
     return amount * unitValue;
 }
 
-function aplicarDescuento(firstValue){
+function aplicarDescuento(firstValue, age){
     let discountAge = firstValue;
 
     if(age>60){
@@ -34,10 +34,10 @@ function aplicarDescuento(firstValue){
     return discountAge;
 }
 
-function metodoDePago(paymentMethod){
+function metodoDePago(paymentMethod, firstDiscount){
     let discountPayment = firstDiscount;
 
-    if(paymentMethod === efectivo){
+    if(paymentMethod === "efectivo"){
         discountPayment = firstDiscount - (firstDiscount * 0.10);
     }
     return discountPayment;
@@ -52,12 +52,12 @@ function horaDelPedido(){
     }
 }
 
-function valorDelCubierto(){
+function valorDelCubierto(secondDiscount){
     let secondValue = secondDiscount + (secondDiscount*0.05);
     return secondValue;
 }
 
-function resumenDelPedido(){
+function resumenDelPedido(firstValue, firstDiscount, secondDiscount, totalValue, age, paymentMethod){
     console.log(`RESUMEN DE SU PEDIDO:`);
     console.log(`Costo sin descuentos ni impuestos: ${firstValue}.`);
     if(age > 60){
