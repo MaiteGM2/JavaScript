@@ -30,7 +30,7 @@ function saludo(){
 }
 
 function validName(name){
-    name.trim().lenght();
+    name.trim().lenght;
     return isNaN(name) && name>0 && name<=25;
 }
 
