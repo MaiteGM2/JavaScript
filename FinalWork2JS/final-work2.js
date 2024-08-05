@@ -97,7 +97,7 @@ function amountProduct(product){
     }
 }
 
-function validAmount(){
+function validAmount(amount){
     amount.trim();
     parseInt(amount);
     return !isNaN(amount) && amount > 0;
