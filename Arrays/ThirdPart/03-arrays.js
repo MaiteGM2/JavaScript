@@ -174,3 +174,17 @@ if(someAge28){
 else{
     console.log("Ninguna persona es adolescente");
 }
+
+// Destructuring
+
+let movies = ["Star Wars", "Ponyo", "X-MEN"];
+let [movie1, movie2, movie3] = movies;
+
+console.log(movie1);
+console.log(movie2);
+console.log(movie3);
+
+let days = ["Lunes", "Martes", "Miercoles"];
+let [,,day3] = days;
+
+console.log(day3);
