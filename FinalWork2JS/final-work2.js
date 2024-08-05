@@ -2,7 +2,7 @@ function gestionarPedido(){
     let userName = saludo();
     let userAge = mayorDeEdad();
     let product = selectedProduct();
-    let amount = amountProduct();
+    let amount = amountProduct(product);
     let productValue = unitValue(product);
     let firstValue = costoTotal(amount, productValue);
     let firstDiscount = aplicarDescuento(firstValue, userAge);
@@ -85,7 +85,7 @@ function validProduct(product){
 
 ////// AMOUNT AND VALUE //////
 
-function amountProduct(){
+function amountProduct(product){
     let amount = prompt(`Ingrese las unidades deseadas del siguiente producto: ${product}`);
 
     if(validAmount(amount)){
