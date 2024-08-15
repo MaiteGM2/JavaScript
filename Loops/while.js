@@ -408,8 +408,6 @@ summaryCards(matchCards);
 
 // 7. Imagina que estás desarrollando un carrito de compras para una página web. Tienes un array de objetos productos, donde cada objeto representa un producto con su nombre y precio. Escribe una función calcularTotal que recorra el array usando un bucle while y calcule el precio total de los productos en el carrito. Muestra el total en la consola.
 
-let products = [product1, product2]
-
 let product1 = {
     product : "Banana",
     price : 50,
@@ -420,13 +418,82 @@ let product2 = {
     price : 55,
 }
 
+let products = [product1, product2]
+
 function calculateTotal (products){
-    while()
+    let counter = 0;
+    let price = 0;
+
+    while(products.length > counter){
+        price += products[counter].price;
+        counter ++;
+    }
+    return price;
 }
 
+let resultExcercise7P3 = calculateTotal (products);
+console.log(`Precio total: ${resultExcercise7P3}`);
+
 // 8. Imagina que estás validando las entradas de un formulario en una página web. Tienes un array datosIngresados que contiene valores que el usuario ingresó. Escribe una función validarEntradas que recorra los datos usando un bucle do while para verificar que todos los campos sean válidos (por ejemplo, que no estén vacíos). Si todos los campos son válidos, muestra un mensaje en la consola indicando "Formulario válido", de lo contrario, muestra "Formulario inválido".
+
+let dataEntered = ["Tucuman", "Femenino", "Tecnico", 25];
+
+function validateEntries (dataEntered) {
+    let counter = 0;
+    let validElement = 0;
+    let valid = false;
+
+    do{
+        if(dataEntered[counter] != undefined && dataEntered[counter] != null){
+            validElement ++;
+        }
+        counter ++;
+
+    }while(dataEntered.length > counter)
+    if(dataEntered.length === validElement){
+            valid = true;
+    }
+    return valid;
+}
+
+let resultExcercise8P3 = validateEntries(dataEntered);
+console.log(resultExcercise8P3);
+
 // 9. Imagina que estás manejando una sección de comentarios en una página web. Tienes un array de objetos comentarios, donde cada objeto tiene un usuario y un comentario. Escribe una función mostrarComentarios que recorra el array usando un bucle while y muestre cada comentario en la consola.
+
+let comment1 ={
+    user: "Juan Pedro",
+    comment: "Imposible",
+}
+
+let comment2 ={
+    user: "Pepe de la Cruz",
+    comment: "Factible",
+}
+
+let comments = [comment1, comment2];
+
+function showComments (comments){
+    let counter = 0;
+    let comment = "Comentarios: ";
+    while(comments.length > counter){
+        comment += ` ${comments[counter].comment}.`;
+        counter ++;
+    }
+    return comment;
+}
+
+let resultExcercise9P3 = showComments(comments);
+console.log(resultExcercise9P3);
+
 // 10. Imagina que estás creando una barra de progreso para una página web. La barra de progreso se llena a medida que se completa una tarea. Escribe una función simularProgreso que use un bucle do while para simular el avance de la barra, incrementando el progreso en un 10% en cada iteración hasta que alcance el 100%. Muestra el progreso en la consola en cada paso.
+
+function simulateProgress (){
+    let completeTask = 0;
+    let progress = 0;
+    while ()
+}
+
 // 11. Imagina que estás diseñando una función de filtrado para una tienda en línea. Tienes un array de objetos productos, donde cada objeto tiene un nombre, categoría, y precio.
 
 // Escribe una función filtrarPorCategoria que recorra el array usando un bucle while y devuelva un nuevo array con los productos que pertenecen a una categoría específica. Muestra los productos filtrados en la consola.
