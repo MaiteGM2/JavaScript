@@ -36,6 +36,7 @@ function approvedSubjects(grades, passingGrade){
     let approved = grades.filter(function(grade){
         return grade >= passingGrade;                                     //corregir errores de consola
     });
+    console.log(`Aprobaste ${approved.length +1} materias.`);
     return approved.length + 1;
 }
 
@@ -43,6 +44,7 @@ function gradeApprovedSubjects(grades, passingGrade){
     let gradeApproved = grades.filter(function(grade){
         return grade >= passingGrade;
     });
+    console.log(`Aprobaste con las ${gradeApproved}`);
     return gradeApproved;
 }
 
@@ -50,6 +52,7 @@ function disapprovedSubjects(grades, passingGrade){
     let disapproved = grades.filter(function(grade){
         return grade < passingGrade;
     });
+
     return disapproved.length + 1;
 }
 
