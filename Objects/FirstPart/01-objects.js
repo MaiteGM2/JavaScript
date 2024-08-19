@@ -62,10 +62,6 @@ function repeatedNames(character){
 
 function descriptionCharacter(character){
     return `Nombre: ${character.name}, Edad: ${character.age}, Arma: ${character.weapon}, Raza: ${character.breed}`;
-        //Name : character.name,
-        // Age :
-        // Clas :
-        //Weapon :
 }
 
 console.log(descriptionCharacter(character));
@@ -151,7 +147,7 @@ function removeAlly(character){
         return ally === unwantedAlly;
     })
     if(allyFound){
-
+                        //Por te
     }
 }
 
