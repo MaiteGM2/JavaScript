@@ -488,10 +488,20 @@ console.log(resultExcercise9P3);
 
 // 10. Imagina que estás creando una barra de progreso para una página web. La barra de progreso se llena a medida que se completa una tarea. Escribe una función simularProgreso que use un bucle do while para simular el avance de la barra, incrementando el progreso en un 10% en cada iteración hasta que alcance el 100%. Muestra el progreso en la consola en cada paso.
 
-function simulateProgress (){
-    let completeTask = 0;
+let exerciseDone = 0;
+let totalOfExercises = 10;
+
+function simulateProgress (exerciseDone, totalOfExercises){
+    let completeTask = false;
     let progress = 0;
-    while ()
+    while (progress <= 100){
+        if(exerciseDone < totalOfExercises){
+
+        }
+        if(completeTask){
+            progress += 10;
+        }
+    }
 }
 
 // 11. Imagina que estás diseñando una función de filtrado para una tienda en línea. Tienes un array de objetos productos, donde cada objeto tiene un nombre, categoría, y precio.
