@@ -46,10 +46,10 @@ exercise7.style.background = '#FF0000';
 // ● Ejercicio 8: Seleccionar y Agregar Contenido Adicional
 // ● Consigna: Selecciona del DOM el elemento div con la clase "content" y agrega dentro de él un nuevo párrafo que diga "Contenido adicional" (O lo que quieras que diga).
 
-let exercise8 = document.getElementById('content');
-exercise8.innerText = 'Contenido Adicional';
+// let exercise8 = document.getElementById('content');
+// exercise8.innerText = 'Contenido Adicional';
 
-console.log(exercise8);
+// console.log(exercise8);
 
 // ● Ejercicio 10: Verificar y Mostrar si un Elemento Tiene una Clase
 // ● Consigna: Selecciona del DOM el elemento con la clase "header" y muestra en la consola si tiene la clase "sticky".
@@ -58,3 +58,22 @@ let exercise10 = document.querySelector('.header');
 let result10 = exercise10.classList.contains('sticky');
 
 console.log(result10);
+
+// ● Ejercicio 11: Crear dos listas de cero
+
+let miUl1 = document.querySelector('ul.create1');
+let miUl2 = document.querySelector('ul.create2');
+let datos1 = ['hola1', 'hola2', 'hola3'];
+let datos2 = ['chau1', 'chau2', 'chau3'];
+
+datos1.forEach(function (dato) {
+  let create = document.createElement('li');
+  create.textContent = dato;
+  miUl1.append(create);
+});
+
+datos2.forEach(function (dato) {
+  let create = document.createElement('li');
+  create.textContent = dato;
+  miUl2.append(create);
+});

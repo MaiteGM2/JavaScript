@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      background-color: aquamarine;
+    }
+  </style>
+
+  <body>
+    <button>click</button>
+    <input type="color" />
+    <input type="text" id="text" />
+
+    <div class="container"></div>
+
+    <a href="www.google.com">Ir a google</a>
+    <h1></h1>
+    <h2></h2>
+
+    <script>
+      let button = document.querySelector('button');
+      let container = document.querySelector('.container');
+      let input = document.querySelector('input');
+      let anchor = document.querySelector('a');
+      let h1 = document.querySelector('h1');
+      let h2 = document.querySelector('h2');
+      let inputText = document.querySelector('#text');
+
+      inputText.addEventListener('input', function (event) {
+        h1.textContent = event.target.value;
+      });
+
+      anchor.addEventListener('click', function (event) {
+        // event.preventDefault();
+      });
+
+      input.addEventListener('input', function (event) {
+        console.log(event.target.value);
+        container.style.backgroundColor = event.target.value;
+      });
+
+      let number = 0;
+      button.addEventListener('click', function () {
+        number++;
+        h2.innerText = number;
+      });
+    </script>
+  </body>
+</html>
