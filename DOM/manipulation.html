@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulation Exercise</title>
+
+    <style>
+      body {
+        background-color: #332f2c;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      #list {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+      }
+      li {
+        list-style: none;
+      }
+
+      .add-button {
+        margin-top: 20px;
+      }
+
+      .theme {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 10px;
+      }
+
+      .alert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 50%;
+        background-color: orange;
+        border: solid 2px;
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-do list</h1>
+    <section id="list">
+      <ul id="first-list">
+        <li><input type="checkbox" /> Comprar huevos</li>
+        <li><input type="checkbox" /> Lavar la ropa</li>
+        <li><input type="checkbox" /> Comprar facturas para seba</li>
+      </ul>
+      <input
+        type="text"
+        placeholder="Agregar una nueva tarea"
+        id="input-1"
+      /><button class="add-button1">Agregar</button>
+      <h2>First List</h2>
+      <ul id="second-list">
+        <li><input type="checkbox" /> Dormir</li>
+        <li><input type="checkbox" /> Comer</li>
+        <li><input type="checkbox" /> Codigo</li>
+        <li><input type="checkbox" /> Repetir</li>
+        <input type="text" placeholder="Agregar una nueva tarea" /><button
+          class="add-button2"
+        >
+          Agregar
+        </button>
+        <h2>Second List</h2>
+      </ul>
+    </section>
+
+    <button id="delete-button">Eliminar</button>
+    <section class="alert-delete">
+      <h1></h1>
+      <div class="button-alert">
+        <button id="yes-button">Si</button>
+        <button id="no-button">No</button>
+      </div>
+    </section>
+
+    <button class="theme">Theme</button>
+
+    <script src="manipulation.js"></script>
+  </body>
+</html>

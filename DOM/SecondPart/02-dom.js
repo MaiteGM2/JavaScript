@@ -182,7 +182,12 @@ createElement.addEventListener('click', function(){
 let changeColor = document.getElementById('change-color');
 let colorList = document.querySelector('color-list');
 
-
+changeColor.addEventListener("click", function(){
+    colorList.style.color = #008f39;
+})
 
 // Ejercicio 18: Crear una Lista de Ítems Dinámicamente: Selecciona un botón con el id "create-list". Agrega un evento que cree una nueva lista ul y añada cinco elementos li dentro de ella, agregando la lista al final de un div con la clase "list-container".
+
+
+
 // Ejercicio 20: Cambiar el Tamaño de un elemento HTML: Selecciona un elemento con el id "resize-image" y agrega un evento que cambie su estilo.
