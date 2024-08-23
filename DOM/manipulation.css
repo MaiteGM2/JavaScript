@@ -1,0 +1,41 @@
+html {
+  background-color: #332f2c;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.list-container{
+    width: 47%;
+    border: solid white 2px;
+    text-align: start;
+    padding: 10px;
+}
+
+.items-list{
+    list-style-type: none;
+    text-align: start;
+    position: relative;
+    right: 20px;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
